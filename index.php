@@ -1,11 +1,6 @@
 <?php
 	require 'connection.php'
-
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,7 +109,6 @@
 </div>
 
 <script>
-
 var timer = new Timer();
 var total = 0;
 var atual = "00:00:00";
@@ -191,11 +185,7 @@ timer.addEventListener('reset', function (e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString([ 'minutes', 'seconds', 'secondTenths']));
     total = timer.getTimeValues().toString(['minutes', 'seconds', 'secondTenths']);
     
-});
-
-
-
-                
+});                
 </script>
 
 </body>
