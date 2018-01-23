@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>BaianoGame</title>
+  <title>LazyGame</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-png" href="favicon.png">
@@ -33,7 +33,7 @@
 <body>
 
 <div class="container-fluid text-center" style="background-color: lightgreen;">
-	<h1 class="text-center">Baiano Game</h1>
+	<h1 class="text-center">LazyGame</h1>
 	<div id="chronoExample">
 	    <div class="values">00:00:00</div>
 	    <div>
