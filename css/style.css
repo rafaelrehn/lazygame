@@ -15,7 +15,7 @@
 		font-family: 'Caveat Brush', cursive;
 		font-size: 600%;
 	}
-	i{
+	i,label{
 		font-family: 'Caveat Brush', cursive;
 	}
 	h3{
@@ -31,6 +31,7 @@
 	    margin-right: auto;
 	    width: 100%;
 	}
+
 	.container{
 		background-color: #EBF7D4;
 	}
