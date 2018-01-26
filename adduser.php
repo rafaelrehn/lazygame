@@ -10,7 +10,7 @@ $temporeal = $_POST['temporeal'];
 $result_recado="INSERT INTO usuario (nome, tempo, temporeal) VALUES ('$nome','$tempo','$temporeal')";
 $resultado_recados = mysqli_query($conn,$result_recado);
 
-header("location: index.php");
+header("location: lazygame/#!/play");
 
 
 ?>
