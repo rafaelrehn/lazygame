@@ -1,7 +1,7 @@
 <?php
 	require '../connection.php'
 ?>
-<div class="container">
+<div class="container" style="background-color: #FFFFCC;">
 	<div class="jumbotron">
 	<h1>World Ranking</h1>
 	<ul>
@@ -19,7 +19,7 @@
 					
 			?>
 		<li type="1" style="list-style-type: none;">
-			<h2 id="listUsuario"><?php echo $contador ?> : <?php echo $rows['nome'] ?><span style="float: right;"><?php echo $rows['tempo'] ?></span></h2>
+			<h2 id="listUsuario"><?php echo $contador ?>º <?php echo $rows['nome'] ?><span style="float: right;"><?php echo $rows['tempo'] ?></span></h2>
 						<?php
 			$contador= $contador+1;
 		}
