@@ -1,0 +1,92 @@
+	/* #EBF7D4 #98CA32 #559E54 #236AB9 #091D34 */
+	footer{
+		background-color: #091D34;	
+	}
+
+	footer a{
+		margin: 1% 0%;
+		color: #98CA32;
+	}
+	footer a:hover{
+		color: #98CA32;
+	}
+	h1{
+		color: #091D34;
+		font-family: 'Caveat Brush', cursive;
+		font-size: 600%;
+	}
+	h3{
+		animation: rubberBand 2s;		
+		font-size: 600%;
+	}
+	body{
+		background-color: #091D34;
+	}
+	img{
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 100%;
+	}
+	.container{
+		
+	}
+	
+	h2,h3,h4,p{
+		font-family: 'Caveat Brush', cursive;
+	}
+	ul{
+		margin: 0;
+		padding: 0;		
+		list-style-type: none;
+	}
+
+
+	.values{
+		font-size: 600%;
+		font-family: 'Caveat Brush', cursive;
+	}
+
+	.btn{
+		font-family: 'Caveat Brush', cursive;
+	}
+
+	.jumbotron{
+		background-color: transparent;
+	}
+
+	/* NAVBAR */
+	.navbar {
+		font-family: 'Caveat Brush', cursive;
+	    margin-bottom: 0;
+	    background-color: #98CA32;
+	    z-index: 9999;
+	    border: 0;
+	    font-size: 18px !important;
+	    line-height: 1.42857143 !important;
+	    letter-spacing: 4px;
+	    border-radius: 0;
+	}
+
+	.navbar li a, .navbar .navbar-brand {
+	    color: #fff !important;
+	}
+
+	.navbar .navbar-brand:hover{
+		color: #236AB9 !important;
+	}
+
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+	    color: #236AB9 !important;
+	    background-color: #fff !important;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: #236AB9;
+	    color: #236AB9 !important;
+	}
+
+	/* PLAY CSS */
+	#gameBody{
+		background-color: #EBF7D4;
+	}
