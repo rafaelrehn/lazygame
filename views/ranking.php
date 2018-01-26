@@ -1,7 +1,7 @@
 <?php
 	require '../connection.php'
 ?>
-<div class="container" style="background-color: lightblue;">
+<div class="container" style="background-color: #559E54;">
 	<div class="jumbotron">
 	<h1>World Ranking</h1>
 	<ul>
