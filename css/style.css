@@ -15,6 +15,9 @@
 		font-family: 'Caveat Brush', cursive;
 		font-size: 600%;
 	}
+	i{
+		font-family: 'Caveat Brush', cursive;
+	}
 	h3{
 		animation: rubberBand 2s;		
 		font-size: 600%;
@@ -29,7 +32,7 @@
 	    width: 100%;
 	}
 	.container{
-		
+		background-color: #EBF7D4;
 	}
 	
 	h2,h3,h4,p{
