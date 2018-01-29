@@ -1,19 +1,19 @@
 <div id="gameBody" class="container">
 	<div class="jumbotron">
-		<h3  class="text-center">The Lazy Game</h3>
+		<h1  class="text-center">The Lazy Game</h1>
 		<div class="container-fluid" style="height: 10px; background-color: #98CA32; margin: 0; padding: 0;"></div>
 
 		<div class="row">			
 
 			<div class="col-sm-8 text-center" style="padding: 1% 0;">
 				<div id="chronoExample">
-				    <div class="values" style="color: #236AB9; font-size: 102px; animation: bounceIn 1s;">00:00:00</div>
+				    <div class="values" style="color: #236AB9; font-size: 102px;">00:00:00</div>
 				    <div>
-				        <button style="width: 200px; height: 100px; font-size: 48px; animation: bounceIn 1s;" class="btn btn-primary btn-lg startButton" onmousedown="contando()" onmouseup="parar()" onmouseleave="parar()" ontouchstart="contando()" ontouchend="parar()">Start</button>        
+				        <button style="width: 200px; height: 100px; font-size: 48px;;" class="btn btn-primary btn-lg startButton" onmousedown="contando()" onmouseup="parar()" onmouseleave="parar()" ontouchstart="contando()" ontouchend="parar()">Start</button>        
 				    </div>
 				</div>
-				<p id="tempo" style="padding-top: 2%; font-size: 300%; animation: bounceIn 1s;">Aguardando</p>
-				<h4 style=" font-size: 300%; animation: bounceIn 1s;">Melhor tempo!</h4><p id="n" style=" font-size: 300%; animation: bounceIn 1s;">00:00:00</p>
+				<p id="tempo" style="padding-top: 2%; font-size: 300%;;">Aguardando</p>
+				<h4 style=" font-size: 300%;">Melhor tempo!</h4><p id="n" style=" font-size: 300%;">00:00:00</p>
 				<!-- Trigger the modal with a button -->
 				
 			</div>
@@ -21,13 +21,12 @@
 				<img src="img/minion.png" style="animation: bounceIn 1s;">
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="jumbotron">
-	   	<form>
-			<h2 class="modal-title">Registrar recorde!</h2> 
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="modal-title">Registrar recorde!</h2> 
+			</div>			
+		</div>
+	   	<form> 
 			<div class="row">
 				<div class="col-sm-8">
 					<label for="usr">Nome:</label>
@@ -36,36 +35,46 @@
 				<div class="col-sm-2">
 					<label for="usr">tempo:</label>
 					<p name="tempo" id="nn">00:00:00</p>
-					<input name="tempophp" type="text" id="tempophp" class="form-control fade">
-					<input name="tempophpreal" type="text" id="tempophpreal" class="form-control fade">
+					<input style="height: 0px" name="tempophp" type="text" id="tempophp" class="form-control fade">
+					<input style="height: 0px" name="tempophpreal" type="text" id="tempophpreal" class="form-control fade">
 				</div>
 				<div class="col-sm-2" style="padding: 1% 0;">					
-					<button id="send" type="submit" class="btn btn-warning btn-lg" style="animation: bounceIn 1s;">Gravar recorde</button>
+					<button id="send" type="submit" class="btn btn-warning btn-lg" >Gravar recorde</button>
 				</div>
 			</div>					
 	    </form>
-    </div>
+		<div id="alert" class="container-fluid alert alert-info alert-dismissable text-center" style="margin: 0;">
+		  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		  <strong>Registrado =)</strong>
+		</div>
+	</div>
 </div>
 
 <script>
-  $("#send").click(function(){
+	$(document).ready(function(){
+		$("#alert").hide();
+	});
 
-    if ($('#nome').val()!='' ) {
+	$("#send").click(function(){
+		if ($('#nome').val()!='' ) {
 
-        var nome = $('#nome').val();
-        var tempophp = $('#tempophp').val();
-        var tempophpreal = $('#tempophpreal').val();
+		    var nome = $('#nome').val();
+		    var tempophp = $('#tempophp').val();
+		    var tempophpreal = $('#tempophpreal').val();
 
-        $.post("adduser.php", {nome,tempophp,tempophpreal}, function( data ) {
-            console.log(data);
-        });
+		    $.post("adduser.php", {nome,tempophp,tempophpreal}, function( data ) {
+		        console.log(data);
+		    });
 
-        $('#nome').val('')
-        $('#tempophp').val('')
-        $('#tempophpreal').val('')
+		    $("#alert").fadeIn("slow");
 
-        }
-  });
+		    $('#nome').trigger("reset");
+
+		    $('#nome').val('');
+		    $('#tempophp').val('');
+		    $('#tempophpreal').val('');
+		    }
+	});
 </script> 
 
 <script src="lib/timer.js"></script>

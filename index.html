@@ -13,18 +13,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="lib/angular-animate.min.js"></script>
   <script src="lib/easytimer/dist/easytimer.min.js"></script>
   <script src="app/app.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet"> 
   
 </head>
-<style>
 
-</style>
 <body>
 
-  <div ng-include="'header.html'"></div>
-  <div ng-view></div>
+  <div id="loading" class="text-center" style="color: #fff;position: absolute;">
+    <h2>Carregando...</h2>
+  </div>
+  <header style="opacity: 0;" ng-include="'header.html'"></header>
+  <main style="opacity: 0;" ng-view></main>
 
 </body>
+
+<script>
+  window.onload = function() {    
+    $("header").css("opacity", "1");
+    $("main").css("opacity", "1");
+    $("#loading").css("opacity", "0");
+
+  };
+</script>
 </html> 

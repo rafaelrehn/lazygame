@@ -1,4 +1,6 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module('myApp', ['ngRoute']);
+
+
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -11,7 +13,7 @@ app.config(function($routeProvider) {
         controller:'myCtrlAbout'
     })
     .when("/ranking", {
-        templateUrl : "views/ranking.php",
+        templateUrl : "views/ranking.html",
         controller:'myCtrlRanking'
     })
     .otherwise({
@@ -31,14 +33,21 @@ app.controller('myCtrlPlay', function($scope) {
     $('h1').css("animation","rubberBand");
 });
 
-app.controller('myCtrlRanking', function($scope) {
-    $("#liabout").removeClass("active");
-    $("#liplay").removeClass("active");
-    $("#liranking").addClass("active");
-});
-
-app.controller('myCtrlAboutout', function($scope) {
+app.controller('myCtrlAboutout', function() {
     $("#liabout").addClass("active");
     $("#liplay").removeClass("active");
     $("#liranking").removeClass("active");
+});
+
+app.controller('myCtrlRanking', function($scope,$http) {
+
+    $("#liabout").removeClass("active");
+    $("#liplay").removeClass("active");
+    $("#liranking").addClass("active");
+    
+    $http.get('listuser.php').then(function(response){
+        $scope.usuarios = response.data;
+        console.log("php")
+    });
+    
 });

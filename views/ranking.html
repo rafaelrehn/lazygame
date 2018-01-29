@@ -1,0 +1,37 @@
+
+<div class="container" style="background-color: #FFFFCC;" >
+	<div class="jumbotron">
+	<h1>World Ranking!</h1>
+	
+	<div class="row">
+		<div class="col-sm-2">
+			<p>Serch Records:</p>
+		</div>
+		<div class="col-sm-10">
+			<input class="form-control" id="myInput" type="text" placeholder="Type a name here...">
+		</div>		
+	</div>
+	<br>
+	<ul>
+		<li>
+			<span style="float: left;"><p style="font-size: 32px;" id="pos"></p></span><p style="font-size: 32px;">Nome:<span style="float: right;">Tempo:</span></p>
+		</li>
+	</ul>
+	<ol id="myOl">
+		<li ng-repeat="x in usuarios | orderBy: '-tempo'" ng-init="">
+			<span style="float: left;"><p id="pos"></p></span><p>{{x.nome}}<span style="float: right;">{{x.tempo}}</span></p>
+		</li>
+	</ol>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myOl li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
