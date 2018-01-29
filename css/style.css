@@ -114,3 +114,14 @@
 	main{
 		animation: fadeIn 0.9s;
 	}
+
+
+	/* MEDIA SIZE */
+	@media screen and (min-width: 320px) {
+		h1 {
+		    font-size: 300%;
+		}
+		.values{
+			font-size: 600% !important;
+		}
+	}

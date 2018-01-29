@@ -1,23 +1,23 @@
 <div id="gameBody" class="container">
 	<div class="jumbotron">
-		<h1  class="text-center">The Lazy Game</h1>
+		<h1 class="text-center">The Lazy Game</h1>
 		<div class="container-fluid" style="height: 10px; background-color: #98CA32; margin: 0; padding: 0;"></div>
 
 		<div class="row">			
 
 			<div class="col-sm-8 text-center" style="padding: 1% 0;">
 				<div id="chronoExample">
-				    <div class="values" style="color: #236AB9; font-size: 102px;">00:00:00</div>
+				    <div class="values" style="color: #236AB9; font-size: 80px;">00:00:00</div>
 				    <div>
 				        <button style="width: 200px; height: 100px; font-size: 48px;;" class="btn btn-primary btn-lg startButton" onmousedown="contando()" onmouseup="parar()" onmouseleave="parar()" ontouchstart="contando()" ontouchend="parar()">Start</button>        
 				    </div>
 				</div>
-				<p id="tempo" style="padding-top: 2%; font-size: 300%;;">Aguardando</p>
-				<h4 style=" font-size: 300%;">Melhor tempo!</h4><p id="n" style=" font-size: 300%;">00:00:00</p>
+				<p id="tempo" style="padding-top: 2%; font-size: 200%;">Aguardando</p>
+				<h4 style=" font-size: 200%;">Melhor tempo!</h4><p id="n" style=" font-size: 200%;">00:00:00</p>
 				<!-- Trigger the modal with a button -->
 				
 			</div>
-			<div class="col-sm-4" style="padding: 4% 0;">
+			<div class="col-sm-4" style="padding-top: 3%;">
 				<img src="img/minion.png" style="animation: bounceIn 1s;">
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 					<input style="height: 0px" name="tempophp" type="text" id="tempophp" class="form-control fade">
 					<input style="height: 0px" name="tempophpreal" type="text" id="tempophpreal" class="form-control fade">
 				</div>
-				<div class="col-sm-2" style="padding: 1% 0;">					
+				<div class="col-sm-2" style="padding-top: 1%;">					
 					<button id="send" type="submit" class="btn btn-warning btn-lg" >Gravar recorde</button>
 				</div>
 			</div>					
