@@ -22,20 +22,10 @@
 
 <body>
 
-  <div id="loading" class="text-center" style="color: #fff;position: absolute;">
-    <h2>Carregando...</h2>
-  </div>
   <header style="opacity: 0;" ng-include="'header.html'"></header>
   <main style="opacity: 0;" ng-view></main>
 
 </body>
 
-<script>
-  window.onload = function() {    
-    $("header").css("opacity", "1");
-    $("main").css("opacity", "1");
-    $("#loading").css("opacity", "0");
 
-  };
-</script>
 </html> 
